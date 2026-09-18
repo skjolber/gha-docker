@@ -1,5 +1,89 @@
 # Changelog
 
+## [1.9.1](https://github.com/skjolber/gha-docker/compare/v1.13.0...v1.9.1) (2026-09-18)
+
+
+### Features
+
+* accept build args to docker build ([#149](https://github.com/skjolber/gha-docker/issues/149)) ([d3cbe9d](https://github.com/skjolber/gha-docker/commit/d3cbe9da5f180e39cb95681e12ac0487c37a81a8))
+* Add option to override git reference to checkout ([#165](https://github.com/skjolber/gha-docker/issues/165)) ([6712c02](https://github.com/skjolber/gha-docker/commit/6712c02c67a8121b6ce97582cdd19de6b0095d4a))
+* Add pull parameter ([#221](https://github.com/skjolber/gha-docker/issues/221)) ([20c7344](https://github.com/skjolber/gha-docker/commit/20c7344bd20161a3cfaa8c943bb8e3b1059a8f4f))
+* add resolve-image action ([#201](https://github.com/skjolber/gha-docker/issues/201)) ([3b4a222](https://github.com/skjolber/gha-docker/commit/3b4a2221fd281eb172bc8881a882aef41679c2ab))
+* add reusable workflow for docker build ([#16](https://github.com/skjolber/gha-docker/issues/16)) ([ee8d5d8](https://github.com/skjolber/gha-docker/commit/ee8d5d8ec36ddbcabb93bfd105c2fac707ff621d))
+* add reusable workflow for docker push ([#25](https://github.com/skjolber/gha-docker/issues/25)) ([e77471c](https://github.com/skjolber/gha-docker/commit/e77471cb3c51f6832bdcded1e2097eea2fe3e56d))
+* Add support for Azure Container Registry ([#28](https://github.com/skjolber/gha-docker/issues/28)) ([4a29710](https://github.com/skjolber/gha-docker/commit/4a297104553a9b283ae6e44ddabd3d1e8839839c))
+* add support for overwriting docker registry for push reusable workflow ([#174](https://github.com/skjolber/gha-docker/issues/174)) ([6646875](https://github.com/skjolber/gha-docker/commit/664687510b5a60805f6e2ad36aeca59b98304bd0))
+* Add support for saving additional artifacts to the artifact storage ([#186](https://github.com/skjolber/gha-docker/issues/186)) ([c1ebc37](https://github.com/skjolber/gha-docker/commit/c1ebc373d1c36632996ff3aa2cf1077faf8de2a7))
+* **build:** add cache input to control docker layer cache mode ([#216](https://github.com/skjolber/gha-docker/issues/216)) ([26f036e](https://github.com/skjolber/gha-docker/commit/26f036e73c74ba9482c46fe9c43ec0eb4d28b53c))
+* docker push extra tags ([#136](https://github.com/skjolber/gha-docker/issues/136)) ([e95f1a2](https://github.com/skjolber/gha-docker/commit/e95f1a28d6ff5e26bad6cbe4fca26ae54dd96c92))
+* input vars and prevent injections ([#68](https://github.com/skjolber/gha-docker/issues/68)) ([f05ff4b](https://github.com/skjolber/gha-docker/commit/f05ff4b4dc06a5ba236fb354968e4030679a644e))
+* pass secrets to build ([#143](https://github.com/skjolber/gha-docker/issues/143)) ([9368c9f](https://github.com/skjolber/gha-docker/commit/9368c9f3ce062fdb1fb23e58db06ab504e393137))
+* refactor common auth patterns ([#47](https://github.com/skjolber/gha-docker/issues/47)) ([fa9090a](https://github.com/skjolber/gha-docker/commit/fa9090af003986def8ebe36f930883a2a07cd121))
+* reuse build with stable API ([cc9b91b](https://github.com/skjolber/gha-docker/commit/cc9b91b557518b3f4cea912383188f95ccd8bc6a))
+* use sha and not head for checkout and add support to select runner ([#140](https://github.com/skjolber/gha-docker/issues/140)) ([15e949e](https://github.com/skjolber/gha-docker/commit/15e949e9a09762431d7688fcd8f51dc990c90e44))
+
+
+### Bug Fixes
+
+* add  skip caching if error parameter ([#204](https://github.com/skjolber/gha-docker/issues/204)) ([8ddf078](https://github.com/skjolber/gha-docker/commit/8ddf078a8455980caf853ab0180ba51cf5bac66a))
+* add docker auth to build, environment property tbd ([8c0c95a](https://github.com/skjolber/gha-docker/commit/8c0c95a86cd6ae338e1795954e2cc20543d42407))
+* add fetch-depth 0 (old pr's) and if pr, ref to pr ([#86](https://github.com/skjolber/gha-docker/issues/86)) ([baa214e](https://github.com/skjolber/gha-docker/commit/baa214e40bac0d5b624a58f1e6822a6c27ebebab))
+* add force to overwrite tag ([c28ece7](https://github.com/skjolber/gha-docker/commit/c28ece72862da94ca8069a287827526940f0aabd))
+* add id-token generation ([#113](https://github.com/skjolber/gha-docker/issues/113)) ([5bd54a8](https://github.com/skjolber/gha-docker/commit/5bd54a8a8c08a8c63b35b3cfcb70abfdccc1f195))
+* add latest tag ([#59](https://github.com/skjolber/gha-docker/issues/59)) ([42e27e5](https://github.com/skjolber/gha-docker/commit/42e27e5d12ec72f38e5af8b2f585b767b3ab59c1))
+* add meta output ([#42](https://github.com/skjolber/gha-docker/issues/42)) ([23a7d6f](https://github.com/skjolber/gha-docker/commit/23a7d6f81d5b065a8ab5890d4262c236d9553402))
+* Add release-please permissions ([#168](https://github.com/skjolber/gha-docker/issues/168)) ([c2eceb0](https://github.com/skjolber/gha-docker/commit/c2eceb084e0e330bf15f6cad87a1b346511a1fad))
+* Additional artifacts not being copied to Github runners ([#189](https://github.com/skjolber/gha-docker/issues/189)) ([40c7a56](https://github.com/skjolber/gha-docker/commit/40c7a566a24e169d06ac27fb4089ce544d8be2ac))
+* always tag explicit ([61b89d5](https://github.com/skjolber/gha-docker/commit/61b89d54707d148d04a3db799d498edd8df729dd))
+* bug in git-ref testing ([#167](https://github.com/skjolber/gha-docker/issues/167)) ([1b5448e](https://github.com/skjolber/gha-docker/commit/1b5448e85e615b90f2e4ef1bbfaa61b509d7e99d))
+* checkout ([dab9960](https://github.com/skjolber/gha-docker/commit/dab996010f1349a2691983438fe054d160730a87))
+* checkout recursive ([#161](https://github.com/skjolber/gha-docker/issues/161)) ([c49b212](https://github.com/skjolber/gha-docker/commit/c49b2121317bc19b993778d3ef4e1c5551ba6a07))
+* **deps:** bump docker/setup-buildx-action from 3.12.0 to 4.0.0 ([#200](https://github.com/skjolber/gha-docker/issues/200)) ([393bf7e](https://github.com/skjolber/gha-docker/commit/393bf7edc9add79e7ba8b2b8439dfe0d72280806))
+* do not use environment for docker push ([#99](https://github.com/skjolber/gha-docker/issues/99)) ([ffa8bad](https://github.com/skjolber/gha-docker/commit/ffa8bad204fe7287ab08f9815cce21fa827d0eb0))
+* enable skip of git tagging ([#96](https://github.com/skjolber/gha-docker/issues/96)) ([ffbe913](https://github.com/skjolber/gha-docker/commit/ffbe913ed18b6c270ca698d2f7d0277b16157cf5))
+* fetch depth 0 ([56dbbab](https://github.com/skjolber/gha-docker/commit/56dbbab01d6e44a48c92ab65eccf4a7703787dda))
+* **fixture:** no dir exist uses defaults.run.working-directory ([54af60b](https://github.com/skjolber/gha-docker/commit/54af60bf929197a48271d3ee4798e67a2a4df51b))
+* **fixture:** will fail but fail is good ([1e4ac1f](https://github.com/skjolber/gha-docker/commit/1e4ac1ff921ae1d024d7552b742c8d5e8aa6fa62))
+* GITHUB_REF_NAME if merge ([68dbfe6](https://github.com/skjolber/gha-docker/commit/68dbfe6b40852cbb684e09803bb7bb221987ac79))
+* make reusable by fixing typo ([e8c2042](https://github.com/skjolber/gha-docker/commit/e8c2042ad02d6ec20cd216ca1faf67313f899ebe))
+* meta action should point to version ([#49](https://github.com/skjolber/gha-docker/issues/49)) ([b54400a](https://github.com/skjolber/gha-docker/commit/b54400ac933911c9ddc87bf2373c3f82b7801922))
+* mistaken property ([b239d10](https://github.com/skjolber/gha-docker/commit/b239d10ba8550eeaa83c4b0a331bd9e23b76975e))
+* multiple artifacts being uploaded instead of only img ([be278da](https://github.com/skjolber/gha-docker/commit/be278da7db452647f6462eea2f4914482c12a151))
+* new cache method ([556e1a1](https://github.com/skjolber/gha-docker/commit/556e1a1f6e6b76d92413be09f5eedef49df1bbc6))
+* new cache method ([#74](https://github.com/skjolber/gha-docker/issues/74)) ([e41eae1](https://github.com/skjolber/gha-docker/commit/e41eae16f2601ffff5be8f7c1ef2782009d1befb))
+* new common standard dependabot config [skip ci] ([#156](https://github.com/skjolber/gha-docker/issues/156)) ([8adc965](https://github.com/skjolber/gha-docker/commit/8adc965141c9bf37f65f58bd471bc8122bbda354))
+* no expect fail test ([40c2506](https://github.com/skjolber/gha-docker/commit/40c25061b1a3194ed6d8d6d5b103f504a455470a))
+* pass along image name ([#40](https://github.com/skjolber/gha-docker/issues/40)) ([04498ca](https://github.com/skjolber/gha-docker/commit/04498cad2b4c126015a91d15b08835b9617d7cf8))
+* pin from tag ([41931ff](https://github.com/skjolber/gha-docker/commit/41931ffb3573bfa7f607c96dd442b7058f92f906))
+* push origin ([59c59b1](https://github.com/skjolber/gha-docker/commit/59c59b154776ec57e9af173d2fbb808c4107e495))
+* release ([#126](https://github.com/skjolber/gha-docker/issues/126)) ([5845473](https://github.com/skjolber/gha-docker/commit/58454730d74d64ec2c87fb2fe405f8451c0266c3))
+* remove buildx ([0561cc2](https://github.com/skjolber/gha-docker/commit/0561cc2c21a876c9270c076a174c96e5e78fc602))
+* remove environment property ([#119](https://github.com/skjolber/gha-docker/issues/119)) ([7273c56](https://github.com/skjolber/gha-docker/commit/7273c569907fce05339c5f57c29fbd6c69a0e93b))
+* remove gha cache build ([c096cac](https://github.com/skjolber/gha-docker/commit/c096cacc8af9e92a21a89a354e4fbf9177eb62f2))
+* remove harness build ([58adf90](https://github.com/skjolber/gha-docker/commit/58adf9010b535569c04cb2e826a4033579dd0b8d))
+* remove image name from git tag ([7f0a00c](https://github.com/skjolber/gha-docker/commit/7f0a00c0bd7ca2848e9643b3508b980a29dad82c))
+* rolling tag ([6b45114](https://github.com/skjolber/gha-docker/commit/6b45114280729eac0dd9ba102109d06823c1deee))
+* run tag even if not in a PR ([#170](https://github.com/skjolber/gha-docker/issues/170)) ([12a8412](https://github.com/skjolber/gha-docker/commit/12a841251f4d593484da39e4d7f0fb4967596ce2))
+* set context ([#61](https://github.com/skjolber/gha-docker/issues/61)) ([e821657](https://github.com/skjolber/gha-docker/commit/e82165707ff7a0b90bc4a9f3f3f85f54d3a2c635))
+* set default branch name if head ref is not set ([7d6ad92](https://github.com/skjolber/gha-docker/commit/7d6ad926c33100513b48911ba053c2398438eb3b))
+* set default branch name if head ref is not set ([#76](https://github.com/skjolber/gha-docker/issues/76)) ([2d1b01b](https://github.com/skjolber/gha-docker/commit/2d1b01b6fe87c53e0f1b60e3af1c6b19619cade1))
+* set timeout ([#63](https://github.com/skjolber/gha-docker/issues/63)) ([2a93a3f](https://github.com/skjolber/gha-docker/commit/2a93a3f21e5bb2a5fd787bf4d656f457b48bddf9))
+* switch to git push --follow-tags ([632d332](https://github.com/skjolber/gha-docker/commit/632d33216d3f1fde247360944486b3c3f35547d1))
+* switch to git push --follow-tags ([511eb24](https://github.com/skjolber/gha-docker/commit/511eb24a51c8b08140085493c383ce5eb8409bb4))
+* tag on push ([#70](https://github.com/skjolber/gha-docker/issues/70)) ([4cbca6d](https://github.com/skjolber/gha-docker/commit/4cbca6dfab0d5c22f9b1930867425d409bf0f5bd))
+* try switch ([92109e0](https://github.com/skjolber/gha-docker/commit/92109e007998976bef48c141f2201347f3de5ba0))
+* typo ([169a117](https://github.com/skjolber/gha-docker/commit/169a1177b2512c11be0c276cf359e3423aadba64))
+* upload artifact always, and tag git with image version ([5cba7cd](https://github.com/skjolber/gha-docker/commit/5cba7cd49b6ee9007ea5e487239bad8c30e8ea5b))
+* use always() ([647e612](https://github.com/skjolber/gha-docker/commit/647e612f5ed492ed8d0c03430e449ade7c1bbe91))
+* use cache-from for push ([#33](https://github.com/skjolber/gha-docker/issues/33)) ([a40ad1d](https://github.com/skjolber/gha-docker/commit/a40ad1d5d425a1e40339c6d265f09316f6a89518))
+* use env for default and crossref ([#4](https://github.com/skjolber/gha-docker/issues/4)) ([78c0c63](https://github.com/skjolber/gha-docker/commit/78c0c63a57523eb324b0762b1eb1349725deebf3))
+* use inputs ([4f0fe9c](https://github.com/skjolber/gha-docker/commit/4f0fe9c6fb8bad05457d6c9b2e7f8092d88b2647))
+
+
+### Miscellaneous Chores
+
+* release 1.9.1 ([#180](https://github.com/skjolber/gha-docker/issues/180)) ([2cab825](https://github.com/skjolber/gha-docker/commit/2cab825307781c81643f87290190fcb935d5dd2f))
+
 ## [1.13.0](https://github.com/entur/gha-docker/compare/v1.12.0...v1.13.0) (2026-09-18)
 
 
